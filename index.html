@@ -1,5 +1,225 @@
-<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Viagem III · Do comércio ao ouro</title><style>
-:root{--navy:#091823;--gold:#e8c27a;--ivory:#f7eddb}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#07121a;color:var(--ivory);font:18px/1.45 system-ui,'Segoe UI',Arial,sans-serif}button{cursor:pointer;font:inherit}button:focus-visible{outline:3px solid white;outline-offset:3px}.stage{min-height:100dvh;background:radial-gradient(ellipse at 65% 30%,#224155,#0c1a25 60%,#07111b);position:relative;isolation:isolate;overflow:hidden}.track{position:fixed;inset:0;z-index:-1;opacity:.19;pointer-events:none;overflow:hidden}.track svg{width:100%;height:100%}.track g{animation:roll 3s linear infinite}@keyframes roll{to{transform:translateY(60px)}}header{display:flex;justify-content:space-between;align-items:center;padding:18px clamp(20px,4vw,70px);gap:16px;background:#08151fc9;border-bottom:1px solid #ad8e5957}.brand{font-weight:900;letter-spacing:.08em;font-size:14px}.brand span{color:var(--gold);margin-left:14px}header .tools{display:flex;gap:8px;flex-wrap:wrap}.ghost{border:1px solid #ac956b85;border-radius:28px;background:#17303fcc;color:var(--ivory);padding:9px 16px;font-weight:700;font-size:14px}main{max-width:1360px;margin:0 auto;padding:clamp(16px,3vh,34px) clamp(20px,4vw,55px) 40px}.screen{display:none}.screen.active{display:block}.intro{padding:clamp(36px,8vh,90px) 0}.eyebrow{color:var(--gold);font-weight:900;letter-spacing:.18em;font-size:13px;text-transform:uppercase}.intro h1{font:700 clamp(48px,7vw,102px)/1.03 Georgia,serif;letter-spacing:-.04em;max-width:900px;margin:22px 0}.intro h1 em{color:var(--gold);font-style:normal}.intro p{font-size:clamp(19px,2vw,27px);margin:16px 0 28px;color:#dce8e7}.start{border:0;background:var(--gold);color:#172431;font-size:19px;font-weight:900;border-radius:32px;padding:16px 27px;box-shadow:0 12px 38px #0007}.videoHead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;gap:12px}.videoHead h2{font:700 clamp(24px,3vw,37px) Georgia,serif;margin:0}.videoHead #clock{font-weight:900;font-size:14px;color:var(--gold)}.moviebox{position:relative;margin:auto;max-width:1220px;background:#000;border:1px solid #a3854e88;border-radius:12px;overflow:hidden;box-shadow:0 25px 75px #0009}.moviebox video{display:block;width:100%;max-height:73vh;aspect-ratio:16/9;background:#080b0f}.overlay{display:none;position:absolute;inset:0;background:#07131def;align-items:center;justify-content:center;z-index:5;padding:20px}.overlay.active{display:flex}.panel{text-align:center;max-width:980px}.panel .eyebrow{margin-bottom:14px}.panel h3{font:700 clamp(32px,4vw,53px)/1.12 Georgia,serif;margin:0 0 22px}.panel p{font-size:clamp(20px,2.3vw,30px);margin:18px 0 28px}.panel strong{color:var(--gold)}.bar{height:3px;background:#3b525c;margin:11px 0 0;border-radius:2px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--gold)}.under{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px}.under p{margin:0;color:#e5dcc9;font-size:16px}.under button{border:1px solid #b99760ab;border-radius:24px;background:#132f3e;color:var(--ivory);padding:9px 16px;font-weight:700;font-size:14px}.foot{font-size:12px;color:#a7b8bb;margin-top:18px}@media(max-width:720px){.brand{font-size:12px}.brand span{display:block;margin:4px 0}.moviebox video{max-height:60vh}header{padding:12px}.under p{font-size:13px}main{padding:18px 12px}.intro{padding-top:45px}}
-</style></head><body><div class="stage"><div class="track" aria-hidden="true"><svg viewBox="0 0 1400 850" preserveAspectRatio="none"><path d="M640 360L220 850M760 360L1180 850" stroke="#e8c27a" stroke-width="8" fill="none"/><g stroke="#e8c27a" stroke-width="8"><path d="M633 388H773M618 415H786M590 450H808M565 497H830M520 559H885M462 648H942M375 755H1032"/></g></svg></div><header><div class="brand">HISTÓRIA A <span>11.º F · VIAGEM III</span></div><div class="tools"><button class="ghost" id="restart">↺ Recomeçar</button><button class="ghost" id="fullscreen">⛶ Projetar</button></div></header><main><section class="screen active intro" id="intro"><div class="eyebrow">PRÓXIMA PARAGEM · BRASIL</div><h1>A riqueza viaja.<br><em>Mas para quem?</em></h1><p>O comboio vai partir. A investigação continua.</p><button class="start" id="start">▶ EMBARCAR</button></section><section class="screen" id="cinema"><div class="videoHead"><h2>Do comércio ao ouro</h2><div id="clock">00:00 / 02:56</div></div><div class="moviebox"><video id="video" playsinline preload="metadata" controls><source src="Viagem_III_video.mp4" type="video/mp4">O navegador não suporta este vídeo.</video><div class="overlay" id="feedback"><div class="panel"><div class="eyebrow">FEEDBACK · A ÚLTIMA AULA</div><h3>Crise comercial → <strong>medidas mercantilistas</strong></h3><p>Conseguiram essas medidas resolver os problemas económicos de Portugal?</p><button class="start" id="advance">▶ CONTINUAR A VIAGEM</button></div></div></div><div class="bar"><i id="progress"></i></div><div class="under"><p id="hint">Observem o filme de 1940. O que revela? O que deixa por explicar?</p><button id="revisit">↺ Rever final</button></div><div class="foot">*Os Bandeirantes*, Humberto Mauro (1940), montagem didática. Representação cinematográfica posterior aos acontecimentos.</div></section></main></div><script>
-const v=document.getElementById('video'),feedback=document.getElementById('feedback');let checked=false;const $=id=>document.getElementById(id);function showMovie(){ $('intro').classList.remove('active');$('cinema').classList.add('active');v.currentTime=0;checked=false;v.volume=1;v.play().catch(()=>{});}function fb(){checked=true;v.pause();feedback.classList.add('active');}function go(){feedback.classList.remove('active');v.currentTime=15;v.play().catch(()=>{});}function fm(s){s=Math.floor(s||0);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}v.addEventListener('timeupdate',()=>{const t=v.currentTime||0,d=v.duration||176;$('clock').textContent=fm(t)+' / '+fm(d);$('progress').style.width=(100*t/d)+'%';if(!checked&&t>=6.15&&t<14.8)fb();});v.addEventListener('seeking',()=>{if(v.currentTime>=15)checked=true});$('start').onclick=showMovie;$('advance').onclick=go;$('restart').onclick=()=>{v.pause();feedback.classList.remove('active');$('cinema').classList.remove('active');$('intro').classList.add('active');checked=false;v.currentTime=0;window.scrollTo(0,0)};$('revisit').onclick=()=>{checked=true;feedback.classList.remove('active');v.currentTime=157;v.play().catch(()=>{});};$('fullscreen').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen();else document.querySelector('.stage').requestFullscreen().catch(()=>{})};document.addEventListener('keydown',e=>{if(e.target.tagName==='BUTTON')return;if(e.code==='Space'&&$('cinema').classList.contains('active')){e.preventDefault();v.paused?v.play():v.pause();}});
-</script></body></html>
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="Mariline Barbosa">
+<meta name="copyright" content="© 2026 Mariline Barbosa">
+<title>História A · 11.º F — Viagem III · Citação de Vieira ao clique</title>
+<meta name="source" content="Humberto Mauro, Os Bandeirantes (1940), excerto didático 00:15–02:37">
+<style>
+:root {color-scheme:dark;--bg:#06121b;--fg:#fff8ea;--muted:#c9c6c0;--gold:#e9c481}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;font-family:system-ui,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--fg)}
+body{overflow:hidden}
+#stage{position:relative;min-height:360px;width:100vw;height:100dvh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;padding:34px 3vw 48px;background:radial-gradient(ellipse at 50% 50%,#17303e 0%,#06151f 65%,#03080e 100%)}
+#film{display:block;width:min(1200px,94vw);max-height:calc(100dvh - 138px);object-fit:contain;aspect-ratio:16/9;background:#000;box-shadow:0 18px 55px #0009;border-radius:10px}
+#toolbar{width:min(1200px,94vw);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+#source{font-size:clamp(11px,.9vw,13px);color:#b9c6ca}
+#controls{display:flex;gap:9px;flex-wrap:wrap}
+button{font:600 clamp(13px,1.15vw,17px) system-ui,sans-serif;color:var(--fg);background:#193441;border:1px solid #a6a7a064;border-radius:26px;padding:10px 18px;cursor:pointer}
+button:hover{background:#2b4b55}button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+#startcover{position:absolute;inset:26px 3vw 100px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;gap:24px;pointer-events:none;background:radial-gradient(ellipse at center,#10212c 0%,#050b12 75%);border-radius:14px}
+#startcover.hidden{display:none}
+#startcover .eyebrow{font-size:clamp(13px,1.2vw,17px);font-weight:750;letter-spacing:.16em;color:var(--gold)}
+#startcover h1{font:700 clamp(32px,4.5vw,66px)/1.12 Georgia,serif;max-width:950px;margin:0;text-wrap:balance}
+#startcover button{pointer-events:auto;color:#12212c;background:var(--gold);border:0;font-size:clamp(16px,1.55vw,22px);font-weight:800;padding:14px 26px}
+#end{position:absolute;inset:0;display:none;z-index:6;align-items:center;justify-content:center;flex-direction:column;text-align:center;gap:clamp(18px,3vh,28px);padding:clamp(36px,5vh,70px) clamp(24px,6vw,90px);background:radial-gradient(ellipse at 50% 50%,#183541,#071822 60%,#030a10 100%)}
+#end.on{display:flex}
+#end .topline{font-size:clamp(12px,1vw,16px);font-weight:800;letter-spacing:.13em;color:var(--gold);text-transform:uppercase}
+#end .lead{font:650 clamp(27px,3vw,43px)/1.2 Georgia,serif;margin:0;max-width:950px;text-wrap:balance}
+#end.showing .lead{display:none}
+#historicalSource{display:none;width:min(100%,1100px);text-align:center;flex-direction:column;align-items:center;gap:13px}
+#end.showing #historicalSource{display:flex}
+#sourceTitle{font-size:clamp(12px,1.05vw,17px);font-weight:800;letter-spacing:.11em;color:var(--gold);text-transform:uppercase}
+#vieiraQuote{max-width:1130px;margin:0;color:#fff8ea;text-wrap:balance;display:flex;flex-direction:column;align-items:center;gap:clamp(6px,1.5vh,13px);font-family:Georgia,serif}
+#vieiraQuote .quote-line{display:block;max-width:100%;text-align:center;font-size:clamp(23px,2.85vw,41px);line-height:1.27;letter-spacing:-.015em;min-height:1.2em}
+#vieiraQuote .quote-line:nth-child(2){font-size:clamp(22px,2.65vw,38px)}
+#vieiraQuote .quote-line.final-line{font-size:clamp(36px,5.45vw,77px);font-weight:800;line-height:1.08;letter-spacing:-.025em;margin-top:clamp(3px,.8vh,9px)}
+#vieiraQuote .emphasis{color:#f4c66a;font-weight:800;text-shadow:0 0 30px #c48b3030}
+#vieiraQuote .warning{color:#ffb388;font-weight:800;text-shadow:0 0 28px #a9574335}
+#vieiraQuote .verdict{color:#ff7767;font-weight:900;text-shadow:0 0 30px #b4414555}
+#vieiraQuote .quote-line.final-line.entered{animation:impactIn .85s ease both}
+@keyframes impactIn{0%{filter:brightness(.7)}55%{filter:brightness(1.5)}100%{filter:brightness(1)}}
+#sourceReference{max-width:1080px}
+#questionDivider{margin:clamp(3px,.7vh,7px) 0}
+
+#sourceReference{font-size:clamp(12px,1vw,16px);color:#c7c8c4}
+#mainQuestion{font:750 clamp(26px,3.15vw,48px)/1.22 Georgia,serif;max-width:1050px;margin:0;text-wrap:balance;min-height:0}
+#mainQuestion[hidden]{display:none}
+#questionDivider{width:90px;height:2px;background:var(--gold);opacity:0;transition:opacity .5s}
+#questionDivider.on{opacity:1}
+#end .buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+#end button{font-size:clamp(14px,1.1vw,18px);padding:11px 22px}
+#toggleProblem{background:var(--gold);color:#0d222d;border-color:var(--gold)}
+.caret{display:inline-block;width:2px;height:.95em;background:var(--gold);vertical-align:-.11em;margin-left:2px;animation:blink .75s steps(1,end) infinite}
+@keyframes blink{50%{opacity:0}}
+#copyright{position:absolute;bottom:12px;right:clamp(16px,3vw,42px);font-size:clamp(11px,.9vw,13px);color:#c5c9c7a8;z-index:12;pointer-events:none}
+#error{display:none;position:absolute;z-index:10;bottom:65px;max-width:min(900px,85vw);padding:10px 18px;background:#593326;color:#fff;border-radius:8px;font-size:14px}#error.on{display:block}
+@media(max-height:690px){#end{gap:14px;padding-top:24px;padding-bottom:45px}#vieiraQuote .quote-line{font-size:clamp(20px,2.25vw,31px)}#vieiraQuote .quote-line:nth-child(2){font-size:clamp(19px,2.1vw,29px)}#vieiraQuote .quote-line.final-line{font-size:clamp(32px,4.2vw,56px)}#mainQuestion{font-size:clamp(23px,2.8vw,38px)}#historicalSource{gap:7px}}
+@media(max-width:680px){#stage{gap:9px;padding:45px 2vw 42px}#film{width:96vw;max-height:calc(100dvh - 135px)}#toolbar{width:96vw}#source{font-size:11px}#startcover{inset:40px 2vw 95px}#end{padding:32px 5vw 48px}#vieiraQuote .quote-line{font-size:clamp(18px,4vw,25px)}#vieiraQuote .quote-line:nth-child(2){font-size:clamp(17px,3.8vw,23px)}#vieiraQuote .quote-line.final-line{font-size:clamp(32px,7vw,49px)}#mainQuestion{font-size:clamp(23px,5vw,32px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+
+/* Edição ao clique: nenhuma passagem se revela automaticamente. */
+#end {gap:clamp(14px,2.1vh,25px)}
+#end .lead {font:650 clamp(27px,3.3vw,47px)/1.2 Georgia,serif;max-width:1020px}
+#historicalSource{gap:clamp(11px,1.7vh,18px)}
+#vieiraQuote{gap:clamp(13px,2vh,22px);min-height:0}
+#vieiraQuote .quote-line{font-size:clamp(25px,2.95vw,44px);line-height:1.22;max-width:1110px}
+#vieiraQuote .quote-line:nth-child(2){font-size:clamp(24px,2.8vw,42px)}
+#vieiraQuote .quote-line.final-line{font-size:clamp(43px,5.4vw,78px);margin:0;letter-spacing:-.035em}
+#vieiraQuote .emphasis{color:#f4cb73;text-shadow:0 0 22px #d9a84c44}
+#vieiraQuote .warning{color:#ffd188;text-shadow:0 0 20px #d9a84c44}
+#vieiraQuote .verdict{color:#ff726b;text-shadow:0 0 35px #e15b494f}
+#vieiraQuote .quote-line{animation:quoteArrives .42s ease-out both}
+@keyframes quoteArrives{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+#sourceReference{display:none;font-size:clamp(12px,1vw,15px);line-height:1.35;max-width:900px}
+#sourceReference.visible{display:block}
+#mainQuestion{font-size:clamp(29px,3.2vw,49px);line-height:1.24;max-width:1060px}
+#questionDivider{width:130px}
+#toggleProblem:disabled{opacity:.65;cursor:wait}
+#hideProblem{display:none;background:transparent;border:1px solid #b8c1c4}
+#end.showing #hideProblem{display:inline-block}
+#end .buttons{margin-top:clamp(2px,.7vh,8px)}
+@media(max-height:700px){#end{gap:11px}#historicalSource{gap:9px}#vieiraQuote{gap:10px}#vieiraQuote .quote-line{font-size:clamp(22px,2.45vw,34px)}#vieiraQuote .quote-line:nth-child(2){font-size:clamp(21px,2.3vw,32px)}#vieiraQuote .quote-line.final-line{font-size:clamp(36px,4.7vw,62px)}#mainQuestion{font-size:clamp(25px,2.9vw,40px)}}
+@media(max-width:680px){#end{gap:14px}#historicalSource{gap:10px}#vieiraQuote .quote-line{font-size:clamp(21px,4.6vw,30px)}#vieiraQuote .quote-line:nth-child(2){font-size:clamp(20px,4.3vw,28px)}#vieiraQuote .quote-line.final-line{font-size:clamp(39px,8vw,56px)}#mainQuestion{font-size:clamp(26px,5vw,36px)}}
+</style>
+</head>
+<body>
+<main id="stage" aria-label="Motivação audiovisual História A — 11.º F">
+ <video id="film" controls playsinline preload="metadata" aria-label="Excerto cinematográfico sobre o Brasil colonial">
+  <source src="Viagem_III_video.mp4" type="video/mp4">
+  O navegador não suporta vídeo HTML5.
+ </video>
+ <div id="startcover">
+  <div class="eyebrow">HISTÓRIA A · 11.º F · VIAGEM III</div>
+  <h1>A viagem continua.</h1>
+  <button id="start" type="button">▶ Iniciar vídeo</button>
+ </div>
+ <div id="toolbar">
+  <div id="source">Fonte audiovisual: Humberto Mauro (1940) · Reconstituição cinematográfica posterior · Excerto 00:15–02:37</div>
+  <div id="controls">
+   <button id="restart" type="button">↺ Recomeçar</button>
+   <button id="fullscreen" type="button">⛶ Projetar</button>
+  </div>
+ </div>
+ <div id="error" role="alert">Não foi possível carregar <strong>Viagem_III_video.mp4</strong>. Verifica se está na mesma pasta do HTML.</div>
+ <section id="end" aria-label="Situação-problema">
+  <div class="topline">A investigação continua</div>
+  <p class="lead">Uma voz do século XVII.<br>Um aviso que atravessou o tempo.</p>
+  <div id="historicalSource" aria-live="polite">
+   <div id="sourceTitle">Padre António Vieira · 1643</div>
+   <blockquote id="vieiraQuote"></blockquote>
+   <div id="sourceReference">Padre António Vieira, proposta dirigida a D. João IV (1643), em <i>Obras Inéditas</i>, tomo II, 1856, p. 42. Excerto com grafia atualizada.</div>
+  </div>
+  <div id="questionDivider"></div>
+  <h2 id="mainQuestion" hidden></h2>
+  <div class="buttons">
+   <button id="toggleProblem" type="button" aria-expanded="false">Situação-problema</button>
+   <button id="hideProblem" type="button">Ocultar</button>
+   <button id="again" type="button">↺ Rever o vídeo</button>
+  </div>
+ </section>
+ <footer id="copyright">© 2026 Mariline Barbosa</footer>
+</main>
+<script>
+(()=>{
+ 'use strict';
+ const film=document.getElementById('film');
+ const startcover=document.getElementById('startcover');
+ const end=document.getElementById('end');
+ const error=document.getElementById('error');
+ const quote=document.getElementById('vieiraQuote');
+ const questionBox=document.getElementById('mainQuestion');
+ const divider=document.getElementById('questionDivider');
+ const problemButton=document.getElementById('toggleProblem');
+ // Excerto de Vieira: cada segmento só aparece mediante um novo clique.
+ // O realce distingue as expressões essenciais sem alterar as palavras citadas.
+ const quoteParts=[
+  [{text:'«[…] sendo um '},{text:'reino fundado todo no comércio',style:'emphasis'},{text:', […]'}],
+  [{text:'o interesse da negociação e comércio, venha a ser '},{text:'todo dos estranhos',style:'warning'},{text:','}],
+  [{text:'e '},{text:'nada seu',style:'verdict'},{text:'.»'}]
+ ];
+ const question='Porque não bastava a riqueza do império para garantir a prosperidade de Portugal?';
+ const CLIP_START=15, CLIP_END=157.375;
+ const ref=document.getElementById('sourceReference');
+ const hideButton=document.getElementById('hideProblem');
+ let playing=false,finished=false,step=0,typing=false,typingJob=null;
+ const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function cancelTyping(){if(typingJob!==null)clearTimeout(typingJob);typingJob=null;typing=false;problemButton.disabled=false}
+ function typeInto(target,segments,done){
+  typing=true;problemButton.disabled=true;
+  const full=segments.map(s=>({chars:Array.from(s.text),style:s.style||'',index:0}));
+  let si=0;
+  function tick(){
+   const seg=full[si];
+   if(!seg){typing=false;typingJob=null;problemButton.disabled=false;done?.();return}
+   let node=target.children[si];
+   if(!node){node=document.createElement('span');if(seg.style)node.className=seg.style;target.appendChild(node)}
+   if(reduceMotion){node.textContent=seg.chars.join('');si++;tick();return}
+   if(seg.index<seg.chars.length){
+    node.textContent+=seg.chars[seg.index++];
+    typingJob=setTimeout(tick,seg.style==='verdict'?45:17);
+   }else{si++;typingJob=setTimeout(tick,50)}
+  }
+  tick();
+ }
+ function hideProblem(){
+  cancelTyping();step=0;end.classList.remove('showing');quote.replaceChildren();
+  ref.classList.remove('visible');questionBox.hidden=true;questionBox.textContent='';
+  divider.classList.remove('on');problemButton.textContent='Situação-problema';
+  problemButton.setAttribute('aria-expanded','false');
+ }
+ function nextProblemStep(){
+  if(typing)return;
+  if(step===4){hideProblem();nextProblemStep();return}
+  if(step===0){end.classList.add('showing');problemButton.setAttribute('aria-expanded','true')}
+  if(step<3){
+   const line=document.createElement('span');line.className='quote-line'+(step===2?' final-line':'');
+   quote.appendChild(line);
+   problemButton.textContent=['Continuar citação','Revelar conclusão','Revelar questão'][step];
+   const s=step;step++;
+   typeInto(line,quoteParts[s],()=>{if(s===2)ref.classList.add('visible')});
+  }else{
+   step=4;divider.classList.add('on');questionBox.hidden=false;
+   problemButton.textContent='Recomeçar citação';
+   typeInto(questionBox,[{text:question}],null);
+  }
+ }
+ let playRequest=0;
+ async function startMovie(){
+  hideProblem();end.classList.remove('on');finished=false;playing=true;
+  error.classList.remove('on');startcover.classList.add('hidden');film.pause();
+  const request=++playRequest;
+  try{
+   if(film.readyState<1){
+    await new Promise((resolve,reject)=>{
+     film.addEventListener('loadedmetadata',resolve,{once:true});
+     film.addEventListener('error',()=>reject(new Error('Vídeo indisponível')),{once:true});
+     film.load();
+    });
+   }
+   if(request!==playRequest)return;
+   film.currentTime=CLIP_START;
+   if(film.seeking)await new Promise(resolve=>film.addEventListener('seeked',resolve,{once:true}));
+   if(request!==playRequest)return;
+   await film.play();
+  }catch(e){if(request===playRequest){playing=false;startcover.classList.remove('hidden');error.classList.add('on')}}
+ }
+ function conclude(){if(finished)return;finished=true;playing=false;playRequest++;film.pause();hideProblem();end.classList.add('on')}
+ film.addEventListener('timeupdate',()=>{if(playing&&!finished&&film.currentTime>=CLIP_END-.09)conclude()});
+ film.addEventListener('seeked',()=>{if(playing&&!finished&&film.currentTime>=CLIP_END)conclude()});
+ film.addEventListener('ended',conclude);
+ film.addEventListener('error',()=>{error.classList.add('on');startcover.classList.remove('hidden')});
+ problemButton.addEventListener('click',nextProblemStep);
+ hideButton.addEventListener('click',hideProblem);
+ for(const id of ['start','again','restart'])document.getElementById(id).addEventListener('click',startMovie);
+ document.getElementById('fullscreen').addEventListener('click',()=>{
+  if(document.fullscreenElement)document.exitFullscreen?.();
+  else document.getElementById('stage').requestFullscreen?.().catch(()=>{});
+ });
+ document.addEventListener('keydown',e=>{if(e.key?.toLowerCase()==='f'&&!e.repeat)document.getElementById('fullscreen').click()});
+})();
+</script>
+</body></html>
